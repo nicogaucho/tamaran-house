@@ -36,7 +36,7 @@ export async function sendContactEmail(formData: FormData): Promise<ContactResul
 </table>`;
 
   const { error } = await resend.emails.send({
-    from: "Tamaran House <onboarding@resend.dev>",
+    from: "Tamaran House <contact@tamaranhouse.com>",
     to: "tamaran.house@gmail.com",
     replyTo: email,
     subject: `New enquiry from ${name} — ${room || "room not specified"}`,
