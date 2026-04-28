@@ -39,11 +39,11 @@ export default function Manifesto() {
             <p className="text-[17px] leading-[1.75] mb-6" style={{ color: "rgba(255,255,255,0.65)" }}>
               <em style={{ fontFamily: "var(--font-dm-serif), serif", fontStyle: "italic", color: "var(--surf)" }}>Tamarán</em>{" "}
               is the ancient name of Gran Canaria —{" "}
-              <strong className="font-medium" style={{ color: "#fff" }}>"the land of the braves."</strong>
+              <strong className="font-medium" style={{ color: "#fff" }}>&ldquo;the land of the braves.&rdquo;</strong>
             </p>
             <p className="text-[17px] leading-[1.75] mb-6" style={{ color: "rgba(255,255,255,0.65)" }}>
               Travel is a way to be brave. We want to celebrate it in our hostel, our home, our family. Tamaran House is not just a
-              place to sleep and eat: it's a place for sharing experiences, friendship, stories to tell, dinners, activities,
+              place to sleep and eat: it&apos;s a place for sharing experiences, friendship, stories to tell, dinners, activities,
               surfing, and adventures together.
             </p>
             <p className="text-[17px] leading-[1.75] mb-6" style={{ color: "rgba(255,255,255,0.65)" }}>

@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/uploads/ImageHero.jpg"
-          alt="Las Canteras Beach"
+          alt="Tamaran House surf hostel — Las Palmas de Gran Canaria"
           fill
           priority
           className="object-cover object-center"
@@ -57,6 +57,7 @@ export default function Hero() {
             Between
             <br />
             <span style={{ color: "var(--coral)" }}>Sand &amp; Sky</span>
+          <span className="sr-only"> — Surf Hostel in Las Palmas de Gran Canaria</span>
           </h1>
           <p
             className="mt-5 max-w-[520px]"

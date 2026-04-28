@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import TopBanner from "@/components/layout/TopBanner";
 import Navbar from "@/components/layout/Navbar";
@@ -75,26 +76,49 @@ const team = [
     role: "Co-Founder",
     bio: "Tourist guide, storyteller, and the heart of Tamaran House.",
     img: "/uploads/Damiano.png",
+    alt: "Damiano — Co-Founder of Tamaran House",
   },
   {
     name: "Eugenie",
     role: "Manager & Operations",
     bio: "She makes sure everything runs smoothly.",
     img: "/uploads/Eugenie.jpeg",
+    alt: "Eugenie — Manager & Operations at Tamaran House",
   },
   {
     name: "Jacopo",
     role: "Co-Founder",
     bio: "Video maker, surfer, ocean passionate turned hostel founder.",
     img: "/uploads/Jacopo.png",
+    alt: "Jacopo — Co-Founder of Tamaran House",
   },
   {
     name: "Nico",
     role: "Co-Founder",
     bio: "Nerd IT boy, surfer, knows every hidden gem on the island.",
     img: "/uploads/nico.jpeg",
+    alt: "Nico — Co-Founder of Tamaran House",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "About Us — Our Story, Team & Gran Canaria",
+  description:
+    "Meet the Tamaran House team and discover why Gran Canaria is the ultimate surf destination. " +
+    "Our story, values, island guide, and weekly activities.",
+  alternates: { canonical: "https://tamaranhouse.com/the-hostel" },
+  openGraph: {
+    url: "https://tamaranhouse.com/the-hostel",
+    images: [
+      {
+        url: "/uploads/GalleryRoof.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tamaran House rooftop — Las Palmas de Gran Canaria",
+      },
+    ],
+  },
+};
 
 export default function TheHostelPage() {
   return (
@@ -110,7 +134,7 @@ export default function TheHostelPage() {
           <div className="absolute inset-0">
             <Image
               src="/uploads/GalleryRoof.jpg"
-              alt="Tamaran House Rooftop"
+              alt="Rooftop terrace at Tamaran House with ocean views"
               fill
               priority
               className="object-cover"
@@ -137,7 +161,7 @@ export default function TheHostelPage() {
                 color: "#fff",
               }}
             >
-              The <span style={{ color: "var(--coral)" }}>Hostel</span>
+              About <span style={{ color: "var(--coral)" }}>Tamaran House</span>
             </h1>
             <p
               className="max-w-[560px]"
@@ -202,7 +226,7 @@ export default function TheHostelPage() {
                       color: "var(--ink)",
                     }}
                   >
-                    "We wanted a place where travelers could feel brave — just like the ancient Canarians."
+                    &ldquo;We wanted a place where travelers could feel brave — just like the ancient Canarians.&rdquo;
                   </blockquote>
                 </RevealOnScroll>
                 <RevealOnScroll delay={2}>
@@ -210,7 +234,7 @@ export default function TheHostelPage() {
                     <p className="text-[16px] leading-[1.8] mb-5" style={{ color: "var(--muted)" }}>
                       Tamaran House was born from an idea of a young friends team in order to develop a sustainable tourism oriented
                       on the promotion of the local territory, recalling the origins and beauty of this land, Gran Canaria. The
-                      passion for the ocean has brought us here and we can't wait to share our passion with you.
+                      passion for the ocean has brought us here and we can&apos;t wait to share our passion with you.
                     </p>
                     <p className="text-[16px] leading-[1.8] mb-5" style={{ color: "var(--muted)" }}>
                       We built this hostel to be more than just a bed for the night. We wanted it to be a{" "}
@@ -218,7 +242,7 @@ export default function TheHostelPage() {
                       become friends, where you eat together, surf together, explore together, and share stories that last a lifetime.
                     </p>
                     <p className="text-[16px] leading-[1.8]" style={{ color: "var(--muted)" }}>
-                      Located just 50 meters from Las Canteras beach, one of Europe's finest urban beaches, Tamaran House puts you
+                      Located just 50 meters from Las Canteras beach, one of Europe&apos;s finest urban beaches, Tamaran House puts you
                       at the heart of everything{" "}
                       <strong className="font-medium" style={{ color: "var(--ink)" }}>Las Palmas de Gran Canaria</strong> has to
                       offer — sun, surf, culture, and buena vibra.
@@ -301,7 +325,7 @@ export default function TheHostelPage() {
                       <em style={{ fontFamily: "var(--font-dm-serif), serif", fontStyle: "italic", color: "var(--surf)" }}>
                         over 300 days of sunshine a year
                       </em>
-                      , with temperatures rarely dropping below 18°C. It's no wonder surfers, digital nomads, and adventurers from
+                      , with temperatures rarely dropping below 18°C. It&apos;s no wonder surfers, digital nomads, and adventurers from
                       across the world choose Las Palmas as their base.
                     </p>
                     <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.6)" }}>
@@ -406,7 +430,7 @@ export default function TheHostelPage() {
               <RevealOnScroll>
                 <p className="text-[15px] leading-[1.75] max-w-[420px]" style={{ color: "var(--muted)" }}>
                   Every week we organize a packed calendar of activities — from surf lessons to group dinners, city tours to yoga
-                  sessions. There's always something going on at Tamaran.
+                  sessions. There&apos;s always something going on at Tamaran.
                 </p>
               </RevealOnScroll>
             </div>
@@ -481,7 +505,7 @@ export default function TheHostelPage() {
               </div>
               <RevealOnScroll>
                 <p className="text-[15px] leading-[1.75] max-w-[400px]" style={{ color: "var(--muted)" }}>
-                  Our team is made up of passionate travelers, surfers and locals who love Las Palmas. We're here to make sure
+                  Our team is made up of passionate travelers, surfers and locals who love Las Palmas. We&apos;re here to make sure
                   your stay is unforgettable.
                 </p>
               </RevealOnScroll>
@@ -494,7 +518,7 @@ export default function TheHostelPage() {
                     <div className="relative overflow-hidden mb-5" style={{ aspectRatio: "3/4", background: "var(--sand)" }}>
                       <Image
                         src={member.img}
-                        alt={member.name}
+                        alt={member.alt}
                         fill
                         className="object-cover"
                         style={{ objectPosition: "center top" }}
