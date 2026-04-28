@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
+import { sendContactEmail } from "@/app/contact/actions";
 
 const channels = [
   {
@@ -52,6 +53,8 @@ const channels = [
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [isPending, startTransition] = useTransition();
 
   return (
     <section style={{ background: "var(--cream)", padding: "100px 0" }}>
@@ -174,7 +177,16 @@ export default function ContactSection() {
                   noValidate
                   onSubmit={(e) => {
                     e.preventDefault();
-                    setSubmitted(true);
+                    setError(null);
+                    const data = new FormData(e.currentTarget);
+                    startTransition(async () => {
+                      const result = await sendContactEmail(data);
+                      if (result.success) {
+                        setSubmitted(true);
+                      } else {
+                        setError(result.error);
+                      }
+                    });
                   }}
                 >
                   <div className="grid gap-4 mb-5" style={{ gridTemplateColumns: "1fr 1fr" }}>
@@ -371,17 +383,25 @@ export default function ContactSection() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full text-white text-[12px] font-medium tracking-[0.18em] uppercase py-4 mt-2 transition-colors duration-200 cursor-pointer border-none"
+                    disabled={isPending}
+                    className="w-full text-white text-[12px] font-medium tracking-[0.18em] uppercase py-4 mt-2 transition-colors duration-200 border-none"
                     style={{
                       background: "var(--terra)",
                       borderRadius: "100px",
                       fontFamily: "var(--font-dm-sans), sans-serif",
+                      cursor: isPending ? "default" : "pointer",
+                      opacity: isPending ? 0.7 : 1,
                     }}
-                    onMouseEnter={(e) => (e.currentTarget.style.background = "var(--coral)")}
-                    onMouseLeave={(e) => (e.currentTarget.style.background = "var(--terra)")}
+                    onMouseEnter={(e) => { if (!isPending) e.currentTarget.style.background = "var(--coral)"; }}
+                    onMouseLeave={(e) => { if (!isPending) e.currentTarget.style.background = "var(--terra)"; }}
                   >
-                    Send Message →
+                    {isPending ? "Sending…" : "Send Message →"}
                   </button>
+                  {error && (
+                    <p className="text-center text-[12px] mt-3" style={{ color: "var(--coral)" }}>
+                      {error}
+                    </p>
+                  )}
                   <p className="text-center text-[11px] mt-3.5 leading-[1.6]" style={{ color: "var(--muted)" }}>
                     By submitting you agree to our privacy policy. We&apos;ll never share your data.
                   </p>

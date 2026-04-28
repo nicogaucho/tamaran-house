@@ -14,6 +14,7 @@ Built with Next.js 16 App Router, TypeScript, and Tailwind CSS v4.
 | Tailwind CSS | v4 | Utility styles |
 | next/font/google | — | Bebas Neue · DM Serif Display · DM Sans |
 | clsx + tailwind-merge | — | Conditional class helpers |
+| Resend | ^4.x | Transactional email (contact form) |
 
 ---
 
@@ -25,6 +26,18 @@ npm run dev      # http://localhost:3000
 npm run build    # production build
 npm run lint     # ESLint check
 ```
+
+---
+
+## Environment variables
+
+Create a `.env.local` file in the project root (never commit this file):
+
+```
+RESEND_API_KEY=re_your_key_here
+```
+
+Get your API key from resend.com. The contact form will return a server error if this variable is missing.
 
 ---
 
