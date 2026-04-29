@@ -15,7 +15,7 @@ Built with Next.js 16 App Router, TypeScript, and Tailwind CSS v4.
 | --- | --- | --- |
 | Next.js | 16.2.4 | Framework (App Router, Turbopack) |
 | TypeScript | 5.x | Type safety |
-| Tailwind CSS | v4 | Utility styles |
+| Tailwind CSS | v4 | Utility styles + responsive breakpoints |
 | next/font/google | — | Bebas Neue · DM Serif Display · DM Sans |
 | clsx + tailwind-merge | — | Conditional class helpers |
 | Resend | ^4.x | Transactional email (contact form) |
@@ -68,29 +68,58 @@ src/
     page.tsx             # Home
     contact/page.tsx     # Contact
     the-hostel/page.tsx  # The Hostel
-    rooms/page.tsx       # Rooms
+    rooms/page.tsx       # Rooms (server component — exports metadata)
   components/
     layout/
       TopBanner.tsx      # Fixed promo bar (terra bg, 36px height)
-      Navbar.tsx         # Transparent → cream on scroll (client)
-      Footer.tsx         # Dark footer, 4-column grid
+      Navbar.tsx         # Transparent → cream on scroll + hamburger menu (client)
+      Footer.tsx         # Dark footer, responsive 1→2→4 column grid
     sections/
-      Hero.tsx           # Full-bleed bg, title, stats
+      Hero.tsx           # Full-bleed bg, title, responsive stats row
       Manifesto.tsx      # Dark ink section, "Land of the Braves"
       Marquee.tsx        # Infinite CSS marquee ticker
-      Spaces.tsx         # Asymmetric 3-col photo grid
-      Activities.tsx     # 6-item 3-col numbered grid
-      Rooms.tsx          # 3-card room preview with pricing
-      Amenities.tsx      # 4×2 icon grid on dark bg
+      Spaces.tsx         # Asymmetric 3-col photo grid (single col on mobile)
+      Activities.tsx     # 6-item numbered grid (1→2→3 cols)
+      Rooms.tsx          # 3-card room preview with pricing (1→2→3 cols)
+      Amenities.tsx      # 4×2 icon grid on dark bg (2 cols mobile, 4 desktop)
       FAQ.tsx            # Accordion, one-open-at-a-time (client)
-      Location.tsx       # Google Maps iframe + distance stats
-      Testimonials.tsx   # 4 guest reviews
+      Location.tsx       # Google Maps iframe + distance stats (map first on mobile)
+      Testimonials.tsx   # 4 guest reviews (1→2→4 cols)
       CTASection.tsx     # Full-bleed CTA with bg image (client)
+      ContactSection.tsx # Contact form + channel list (client)
+      RoomCard.tsx       # Individual room card with hover state (client)
     ui/
       RevealOnScroll.tsx # IntersectionObserver fade-in utility (client)
 public/
   uploads/               # All photo assets (copied from design bundle)
 ```
+
+---
+
+## Responsive design
+
+The site is fully responsive across three breakpoints:
+
+| Breakpoint | Width | Tailwind prefix |
+| --- | --- | --- |
+| Mobile | 375px | (default) |
+| Tablet | 768px | `md:` |
+| Desktop | 1280px+ | `lg:` / `md:` |
+
+**Container padding** — every section inner container uses:
+
+```text
+px-5 sm:px-8 md:px-12
+```
+
+**Section vertical padding**:
+
+```text
+py-16 md:py-[120px]   (large)
+py-16 md:py-[80px]    (compact)
+```
+
+Layout properties (`padding`, `gridTemplateColumns`) live in Tailwind `className`, not inline `style`, so responsive prefixes work. Color tokens (`var(--terra)` etc.) may stay in inline style.
 
 ---
 
@@ -140,15 +169,25 @@ All buttons use `border-radius: 100px` (pill shape). The base style is set globa
 
 ## Key component notes
 
-**`RevealOnScroll`** — polymorphic wrapper that adds `.reveal` and observes itself with `IntersectionObserver`; fires `.visible` once on entry then disconnects. Accepts `delay` (0–4) mapped to `.reveal-delay-N` CSS classes.
+**`TopBanner`** — client component; on mobile (< sm) shows only the promo code; email and WhatsApp links are hidden with `hidden sm:inline`.
 
-**`Navbar`** — client component; listens to `window.scroll` with `{ passive: true }` and toggles `scrolled` state to switch the background from transparent to `var(--cream)` after 60px.
+**`Navbar`** — client component; two states: (1) `scrolled` — background switches from transparent to `var(--cream)` after 60px scroll; (2) `menuOpen` — hamburger button (mobile-only, `flex md:hidden`) toggles a full-width dropdown drawer with all nav links stacked vertically. Both states share the same nav background logic (`scrolled || menuOpen → cream`).
+
+**`Footer`** — responsive grid: `grid-cols-1 sm:grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr]`. Bottom bar stacks on mobile.
+
+**`RevealOnScroll`** — polymorphic wrapper that adds `.reveal` and observes itself with `IntersectionObserver`; fires `.visible` once on entry then disconnects. Accepts `delay` (0–4) mapped to `.reveal-delay-N` CSS classes. Also accepts `className` for layout utility (e.g. `md:row-span-2`).
+
+**`Spaces`** — asymmetric grid (`grid-cols-1 md:grid-cols-[2fr_1fr_1fr]`). First card uses `md:row-span-2` (no `row-span-2` on mobile to avoid layout collapse).
 
 **`FAQ`** — client component; tracks open index in local state; animates with `max-height` transition.
 
+**`Location`** — map div has `order-first md:order-last` so the iframe appears above the text on mobile.
+
 **`CTASection`** — client component; accepts props for all copy and both button targets so it is reused across all four pages.
 
-**`rooms/page.tsx`** — marked `"use client"` because `RoomCard` uses inline `onMouseEnter`/`onMouseLeave` handlers on the book button.
+**`ContactSection`** — client component; form input grid is `grid-cols-1 sm:grid-cols-2`. Form card padding is `p-6 sm:p-8 md:p-12`.
+
+**`rooms/page.tsx`** — **server component** (exports `metadata`). `RoomCard.tsx` is the client component that handles hover state.
 
 ---
 

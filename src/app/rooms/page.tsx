@@ -63,8 +63,8 @@ export default function RoomsPage() {
       <main>
         {/* Page Hero */}
         <section
-          className="relative flex flex-col justify-end overflow-hidden"
-          style={{ height: "60vh", minHeight: 480, padding: "0 48px 72px" }}
+          className="relative flex flex-col justify-end overflow-hidden px-5 pb-14 sm:px-8 md:px-12 md:pb-[72px]"
+          style={{ height: "60vh", minHeight: 480 }}
         >
           <div className="absolute inset-0">
             <Image
@@ -120,7 +120,7 @@ export default function RoomsPage() {
           className="border-b"
           style={{ padding: "100px 0", borderColor: "var(--rule)" }}
         >
-          <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
+          <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
             <RevealOnScroll>
               <span
                 className="text-[10px] font-medium tracking-[0.25em] uppercase block mb-3.5"
@@ -141,7 +141,7 @@ export default function RoomsPage() {
                 4-Bed Dorms
               </h2>
             </RevealOnScroll>
-            <div className="grid gap-[3px]" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
+            <div className="grid gap-[3px] grid-cols-1 md:grid-cols-2">
               {dorms.map((room, i) => (
                 <RevealOnScroll key={room.island} delay={(i % 2) as 0 | 1}>
                   <RoomCard room={room} />
@@ -157,7 +157,7 @@ export default function RoomsPage() {
           className="border-b"
           style={{ background: "var(--sand)", padding: "100px 0", borderColor: "var(--rule)" }}
         >
-          <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
+          <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
             <RevealOnScroll>
               <span
                 className="text-[10px] font-medium tracking-[0.25em] uppercase block mb-3.5"
@@ -178,7 +178,7 @@ export default function RoomsPage() {
                 Private Rooms
               </h2>
             </RevealOnScroll>
-            <div className="grid gap-[3px]" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
+            <div className="grid gap-[3px] grid-cols-1 md:grid-cols-2">
               {privateRooms.map((room, i) => (
                 <RevealOnScroll key={room.island} delay={(i as 0 | 1)}>
                   <RoomCard room={room} />
@@ -193,7 +193,7 @@ export default function RoomsPage() {
           id="master"
           style={{ background: "var(--ink)", padding: "100px 0" }}
         >
-          <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
+          <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
             <RevealOnScroll>
               <span
                 className="text-[10px] font-medium tracking-[0.25em] uppercase block mb-3.5"
@@ -214,23 +214,23 @@ export default function RoomsPage() {
               </h2>
             </RevealOnScroll>
 
-            {/* Gran Canaria — horizontal full-width card */}
+            {/* Gran Canaria — horizontal on desktop, stacked on mobile */}
             <RevealOnScroll>
               <div
-                className="flex overflow-hidden"
+                className="flex flex-col md:flex-row overflow-hidden"
                 style={{
                   background: "rgba(255,255,255,0.04)",
                   border: "1px solid rgba(255,255,255,0.08)",
                   minHeight: 420,
                 }}
               >
-                <div className="relative flex-shrink-0 overflow-hidden" style={{ width: "55%" }}>
+                <div className="relative flex-shrink-0 overflow-hidden w-full h-[260px] md:w-[55%] md:h-auto">
                   <Image
                     src="/uploads/Private.jpg"
                     alt="Gran Canaria Master Room — ocean view suite at Tamaran House"
                     fill
                     className="object-cover object-center"
-                    sizes="55vw"
+                    sizes="(max-width: 768px) 100vw, 55vw"
                   />
                   <div className="absolute top-4 left-4 flex gap-2">
                     <span

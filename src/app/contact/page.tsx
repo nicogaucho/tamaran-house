@@ -32,7 +32,7 @@ export default function ContactPage() {
                 "repeating-linear-gradient(-45deg, transparent, transparent 24px, rgba(255,255,255,0.015) 24px, rgba(255,255,255,0.015) 25px)",
             }}
           />
-          <div className="relative z-10 mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
+          <div className="relative z-10 mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
             <p
               className="text-[11px] font-medium tracking-[0.25em] uppercase mb-4"
               style={{ color: "var(--coral)" }}

@@ -25,10 +25,10 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section style={{ background: "var(--sand)", padding: "120px 0" }}>
-      <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
+    <section className="py-16 md:py-[120px]" style={{ background: "var(--sand)" }}>
+      <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
         {/* Header */}
-        <div className="flex justify-between items-end mb-16">
+        <div className="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-end mb-16">
           <div>
             <RevealOnScroll>
               <p className="text-[10px] font-medium tracking-[0.25em] uppercase mb-5" style={{ color: "var(--terra)" }}>
@@ -69,7 +69,7 @@ export default function Testimonials() {
         </div>
 
         {/* Grid */}
-        <div className="grid gap-[2px]" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
+        <div className="grid gap-[2px] grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
           {testimonials.map((t, i) => (
             <RevealOnScroll key={i} delay={(i as 0 | 1 | 2 | 3)}>
               <div

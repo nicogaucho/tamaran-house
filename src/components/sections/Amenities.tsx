@@ -77,8 +77,8 @@ const amenities = [
 
 export default function Amenities() {
   return (
-    <section style={{ background: "var(--ink)", padding: "80px 0" }}>
-      <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
+    <section className="py-[80px]" style={{ background: "var(--ink)" }}>
+      <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
         <RevealOnScroll>
           <p
             className="text-[10px] font-medium tracking-[0.25em] uppercase mb-10"
@@ -88,15 +88,15 @@ export default function Amenities() {
           </p>
         </RevealOnScroll>
         <div
-          className="grid border"
-          style={{ gridTemplateColumns: "repeat(4, 1fr)", borderColor: "rgba(255,255,255,0.08)" }}
+          className="grid grid-cols-2 md:grid-cols-4 border overflow-hidden"
+          style={{ borderColor: "rgba(255,255,255,0.08)" }}
         >
           {amenities.map((a, i) => (
             <RevealOnScroll key={a.name} delay={(i % 4) as 0 | 1 | 2 | 3}>
               <div
-                className="p-9 transition-colors duration-200 hover:bg-white/[0.04]"
+                className="p-6 md:p-9 transition-colors duration-200 hover:bg-white/[0.04]"
                 style={{
-                  borderRight: (i + 1) % 4 !== 0 ? "1px solid rgba(255,255,255,0.08)" : "none",
+                  borderRight: "1px solid rgba(255,255,255,0.08)",
                   borderBottom: "1px solid rgba(255,255,255,0.08)",
                 }}
               >

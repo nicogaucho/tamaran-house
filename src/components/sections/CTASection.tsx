@@ -23,7 +23,7 @@ export default function CTASection({
   secondaryHref = "/contact",
 }: CTASectionProps) {
   return (
-    <section className="relative overflow-hidden text-center" style={{ padding: "160px 48px" }}>
+    <section className="relative overflow-hidden text-center px-5 py-20 sm:px-8 sm:py-28 md:px-12 md:py-[160px]">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
@@ -73,10 +73,9 @@ export default function CTASection({
             href={primaryHref}
             target={primaryHref.startsWith("http") ? "_blank" : undefined}
             rel={primaryHref.startsWith("http") ? "noopener noreferrer" : undefined}
-            className="inline-block text-white text-[12px] font-medium tracking-[0.2em] uppercase no-underline transition-all duration-200 hover:-translate-y-0.5"
+            className="inline-block text-white text-[12px] font-medium tracking-[0.2em] uppercase no-underline transition-all duration-200 hover:-translate-y-0.5 py-[14px] px-8 md:py-[18px] md:px-12"
             style={{
               background: "var(--terra)",
-              padding: "18px 48px",
               borderRadius: "100px",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "var(--coral)")}
@@ -87,11 +86,10 @@ export default function CTASection({
           {secondaryLabel && (
             <Link
               href={secondaryHref!}
-              className="inline-block text-[12px] font-medium tracking-[0.2em] uppercase no-underline transition-colors duration-200"
+              className="inline-block text-[12px] font-medium tracking-[0.2em] uppercase no-underline transition-colors duration-200 py-[14px] px-8 md:py-[18px] md:px-12"
               style={{
                 border: "1px solid rgba(255,255,255,0.3)",
                 color: "rgba(255,255,255,0.7)",
-                padding: "18px 48px",
                 borderRadius: "100px",
               }}
               onMouseEnter={(e) => {

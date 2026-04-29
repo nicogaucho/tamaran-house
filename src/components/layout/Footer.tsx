@@ -4,12 +4,11 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer
-      className="px-12 pt-16 pb-10"
+      className="px-5 sm:px-8 md:px-12 pt-16 pb-10"
       style={{ background: "oklch(10% 0.012 240)", color: "rgba(255,255,255,0.45)" }}
     >
       <div
-        className="max-w-[1280px] mx-auto grid gap-12 mb-14"
-        style={{ gridTemplateColumns: "2fr 1fr 1fr 1fr" }}
+        className="max-w-[1280px] mx-auto grid gap-12 mb-14 grid-cols-1 sm:grid-cols-2 md:grid-cols-[2fr_1fr_1fr_1fr]"
       >
         <div>
           <Image
@@ -60,7 +59,7 @@ export default function Footer() {
         </div>
       </div>
       <div
-        className="max-w-[1280px] mx-auto flex justify-between items-center pt-8 text-[12px]"
+        className="max-w-[1280px] mx-auto flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center pt-8 text-[12px]"
         style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
       >
         <span>Tamaran House © 2022  — Las Palmas de Gran Canaria <br /> Copyright © 2026 Digital Consulting Agüita SL. All rights reserved. - This software was developed for Tamaran House / Agüita Canarias SL</span>

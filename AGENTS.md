@@ -40,22 +40,62 @@ public/uploads/        ← all photo assets — do not rename files
 
 | Component | Directive | Reason |
 | --- | --- | --- |
-| `Navbar` | `"use client"` | `window.scroll` listener |
+| `Navbar` | `"use client"` | `window.scroll` listener + `menuOpen` hamburger state |
 | `TopBanner` | `"use client"` | marked for potential future state |
 | `FAQ` | `"use client"` | accordion open/close state |
 | `CTASection` | `"use client"` | hover event handlers |
 | `RevealOnScroll` | `"use client"` | `IntersectionObserver` |
-| `rooms/page.tsx` | `"use client"` | `RoomCard` inline mouse handlers |
+| `RoomCard.tsx` | `"use client"` | inline `onMouseEnter`/`onMouseLeave` handlers |
 | Everything else | Server component (default) | no interactivity needed |
 
+`rooms/page.tsx` exports `metadata` — it is a **server** component. `RoomCard` is the client component it renders.
+
 If you add interactivity to a currently server component, add `"use client"` to that file. Do not bubble it up to `layout.tsx`.
+
+## Responsive design
+
+The site is fully responsive across three breakpoints using Tailwind CSS v4 prefixes:
+
+| Breakpoint | Width | Tailwind prefix |
+| --- | --- | --- |
+| Mobile | 375px | (default — no prefix) |
+| Tablet | 768px | `md:` |
+| Desktop | 1280px | `lg:` (or `md:` when 768 suffices) |
+
+**Container padding pattern** (use on every section container `div`):
+
+```text
+px-5 sm:px-8 md:px-12
+```
+
+Never use `padding: "0 48px"` in inline styles for containers — this breaks on mobile.
+
+**Section vertical padding pattern**:
+
+```text
+py-16 md:py-[120px]   ← large sections
+py-16 md:py-[80px]    ← compact sections
+```
+
+**Common grid patterns**:
+
+```text
+grid-cols-1 md:grid-cols-2              ← 2-col content grids
+grid-cols-1 sm:grid-cols-2 md:grid-cols-3   ← activity/room cards
+grid-cols-1 sm:grid-cols-2 md:grid-cols-4   ← testimonials / amenities row
+grid-cols-2 md:grid-cols-4              ← team, amenities (2 per row on mobile)
+grid-cols-1 md:grid-cols-[280px_1fr]    ← sidebar + content
+grid-cols-[2fr_1fr_1fr]                 ← asymmetric photo grids (md+ only, prepend grid-cols-1)
+```
+
+**Inline style extraction rule**: layout properties (`padding`, `gridTemplateColumns`, `gridTemplateRows`) must be extracted to Tailwind className so responsive prefixes work. Colors using `var(--token)` may stay in inline style.
 
 ## Design rules
 
 - **Colors** — OKLCH tokens only. `var(--terra)` for primary accent, `var(--coral)` for hover, `var(--ink)` for dark sections, `var(--cream)` for page bg.
 - **Fonts** — `var(--font-bebas)` for display type, `var(--font-dm-serif)` for italic editorial, `var(--font-dm-sans)` for body.
 - **Buttons** — `border-radius: 100px` (pill). Enforced globally in `globals.css`.
-- **Spacing rhythm** — sections use `padding: 120px 0` (large) or `80px 0` (compact). Containers are `max-width: 1280px` with `padding: 0 48px`.
+- **Spacing rhythm** — sections use `py-16 md:py-[120px]` (large) or `py-16 md:py-[80px]` (compact). Containers use `px-5 sm:px-8 md:px-12` horizontal padding and `max-width: 1280px mx-auto`.
 - **Scroll reveal** — wrap new content blocks in `<RevealOnScroll>`. Accepts `delay` prop (0–4) for staggered children.
 
 ## Adding a new section
@@ -63,21 +103,24 @@ If you add interactivity to a currently server component, add `"use client"` to 
 1. Create `src/components/sections/MySection.tsx`.
 2. Import and use `RevealOnScroll` for animated content.
 3. Use `var(--*)` tokens for all colors via inline styles.
-4. Add it to the relevant page file.
-5. Run `npm run build` — confirm no errors.
+4. Use `px-5 sm:px-8 md:px-12` on the inner container div for horizontal padding.
+5. Use responsive grid classes (see patterns above) — never `gridTemplateColumns` in inline style.
+6. Add it to the relevant page file.
+7. Run `npm run build` — confirm no errors.
 
 ## Adding a new page
 
 1. Create `src/app/my-route/page.tsx`.
 2. Import `TopBanner`, `Navbar`, and `Footer` from `@/components/layout/`.
 3. Wrap sections in `<main>`.
-4. Add a nav link in `src/components/layout/Navbar.tsx`.
+4. Add a nav link in `src/components/layout/Navbar.tsx` (both the desktop `<ul>` and the mobile drawer).
 
 ## Images
 
 - All assets are in `public/uploads/`. Use `next/image` with `fill` + `sizes` for responsive images.
 - Do not rename existing asset files — filenames are referenced by path in component code.
 - Prefer `object-cover` with an explicit `objectPosition` matching the focal point of the photo.
+- For fill images, the container must have `position: relative` and an explicit height (e.g. `h-[280px]`).
 
 ## Common mistakes to avoid
 
@@ -86,3 +129,5 @@ If you add interactivity to a currently server component, add `"use client"` to 
 - Do not use `<img>` — always use `next/image`.
 - Do not add `"use client"` to `layout.tsx` or page files that do not need it.
 - Do not create new CSS files — extend `globals.css` for global rules or use inline styles.
+- Do not put `padding` or `gridTemplateColumns` in inline styles on containers — use Tailwind className so responsive prefixes work.
+- When adding a nav link, update **both** the desktop `<ul>` and the mobile drawer in `Navbar.tsx`.

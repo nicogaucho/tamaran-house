@@ -36,13 +36,10 @@ const spaces = [
 
 export default function Spaces() {
   return (
-    <section style={{ background: "var(--cream)", padding: "120px 0" }}>
-      <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
+    <section className="py-16 md:py-[120px]" style={{ background: "var(--cream)" }}>
+      <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
         {/* Header */}
-        <div
-          className="grid gap-10 items-end mb-16"
-          style={{ gridTemplateColumns: "1fr 1fr" }}
-        >
+        <div className="grid gap-6 md:gap-10 items-end mb-16 grid-cols-1 md:grid-cols-2">
           <div>
             <RevealOnScroll>
               <p className="text-[10px] font-medium tracking-[0.25em] uppercase mb-5" style={{ color: "var(--terra)" }}>
@@ -72,21 +69,17 @@ export default function Spaces() {
           </RevealOnScroll>
         </div>
 
-        {/* Grid: 3-col, first card spans 2 rows */}
-        <div
-          className="grid gap-[3px]"
-          style={{ gridTemplateColumns: "2fr 1fr 1fr", gridTemplateRows: "auto auto" }}
-        >
+        {/* Grid: 3-col on md+, single col on mobile */}
+        <div className="grid gap-[3px] grid-cols-1 md:grid-cols-[2fr_1fr_1fr]">
           {spaces.map((space, i) => (
             <RevealOnScroll
               key={space.name}
               delay={i === 0 ? 0 : i === 1 || i === 3 ? 1 : i === 2 || i === 4 ? 2 : 3}
-              className={i === 0 ? "row-span-2" : ""}
+              className={i === 0 ? "md:row-span-2" : ""}
             >
               <div className="relative overflow-hidden cursor-pointer group h-full">
                 <div
-                  className="relative overflow-hidden"
-                  style={i === 0 ? { height: "100%", minHeight: 580 } : { height: 280 }}
+                  className={`relative overflow-hidden ${i === 0 ? "h-[280px] md:h-full md:min-h-[580px]" : "h-[280px]"}`}
                 >
                   <Image
                     src={space.img}

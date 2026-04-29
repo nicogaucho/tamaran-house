@@ -20,12 +20,9 @@ const stats = [
 
 export default function Location() {
   return (
-    <section style={{ background: "var(--cream)", padding: "120px 0" }}>
-      <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
-        <div
-          className="grid gap-20 items-center"
-          style={{ gridTemplateColumns: "1fr 1fr" }}
-        >
+    <section className="py-16 md:py-[120px]" style={{ background: "var(--cream)" }}>
+      <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
+        <div className="grid gap-20 items-center grid-cols-1 md:grid-cols-2">
           {/* Left: text + stats */}
           <div>
             <RevealOnScroll>
@@ -89,14 +86,14 @@ export default function Location() {
             </RevealOnScroll>
           </div>
 
-          {/* Right: map */}
-          <RevealOnScroll>
-            <div className="relative overflow-hidden" style={{ aspectRatio: "4/3" }}>
+          {/* Right: map — first on mobile, last on desktop */}
+          <RevealOnScroll className="order-first md:order-last">
+            <div className="relative overflow-hidden h-[280px] md:h-[420px]">
               <iframe
                 src="https://www.google.com/maps?q=Calle+Sargento+Llagas+34,+35007+Las+Palmas+de+Gran+Canaria&output=embed"
                 width="100%"
                 height="100%"
-                style={{ border: 0, display: "block", minHeight: 420 }}
+                style={{ border: 0, display: "block" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

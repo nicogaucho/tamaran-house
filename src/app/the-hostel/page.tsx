@@ -128,8 +128,8 @@ export default function TheHostelPage() {
       <main>
         {/* Page Hero */}
         <section
-          className="relative flex flex-col justify-end overflow-hidden"
-          style={{ height: "70vh", minHeight: 560, padding: "0 48px 72px" }}
+          className="relative flex flex-col justify-end overflow-hidden px-5 pb-14 sm:px-8 md:px-12 md:pb-[72px]"
+          style={{ height: "70vh", minHeight: 560 }}
         >
           <div className="absolute inset-0">
             <Image
@@ -178,9 +178,9 @@ export default function TheHostelPage() {
         </section>
 
         {/* Our Story */}
-        <section id="story" style={{ background: "var(--cream)", padding: "120px 0" }}>
-          <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
-            <div className="grid gap-20 items-center" style={{ gridTemplateColumns: "1fr 1fr" }}>
+        <section id="story" className="py-16 md:py-[120px]" style={{ background: "var(--cream)" }}>
+          <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
+            <div className="grid gap-20 items-center grid-cols-1 md:grid-cols-2">
               {/* YouTube embed */}
               <RevealOnScroll>
                 <div className="relative overflow-hidden" style={{ aspectRatio: "4/5", background: "#000" }}>
@@ -255,9 +255,9 @@ export default function TheHostelPage() {
         </section>
 
         {/* Values */}
-        <section style={{ background: "var(--terra)", padding: "100px 0" }}>
-          <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
-            <div className="grid gap-[2px]" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
+        <section className="py-[100px]" style={{ background: "var(--terra)" }}>
+          <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
+            <div className="grid gap-[2px] grid-cols-1 sm:grid-cols-3">
               {values.map((v, i) => (
                 <RevealOnScroll key={v.num} delay={(i as 0 | 1 | 2)}>
                   <div
@@ -287,9 +287,9 @@ export default function TheHostelPage() {
         </section>
 
         {/* Island of Eternal Spring */}
-        <section id="island" style={{ background: "var(--ink)", padding: "120px 0", overflow: "hidden" }}>
-          <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
-            <div className="grid gap-20 items-center" style={{ gridTemplateColumns: "1fr 1fr" }}>
+        <section id="island" className="py-16 md:py-[120px] overflow-hidden" style={{ background: "var(--ink)" }}>
+          <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
+            <div className="grid gap-20 items-center grid-cols-1 md:grid-cols-2">
               {/* Text */}
               <div>
                 <RevealOnScroll>
@@ -336,7 +336,7 @@ export default function TheHostelPage() {
                   </div>
                 </RevealOnScroll>
                 <RevealOnScroll delay={3}>
-                  <div className="grid gap-[2px] mt-12" style={{ gridTemplateColumns: "1fr 1fr" }}>
+                  <div className="grid gap-[2px] mt-12 grid-cols-2 sm:grid-cols-4">
                     {islandStats.map((s) => (
                       <div
                         key={s.num}
@@ -358,39 +358,36 @@ export default function TheHostelPage() {
                 </RevealOnScroll>
               </div>
 
-              {/* Photos grid */}
+              {/* Photos grid — 3 equal columns on sm+, stacked on mobile */}
               <RevealOnScroll>
-                <div
-                  className="grid gap-[3px]"
-                  style={{ gridTemplateColumns: "1fr 1fr", gridTemplateRows: "1fr 1fr", height: 560 }}
-                >
-                  <div className="relative overflow-hidden row-span-2">
+                <div className="grid gap-[3px] grid-cols-1 sm:grid-cols-3">
+                  <div className="relative overflow-hidden h-[260px] sm:h-[480px]">
                     <Image
                       src="/uploads/_DSC5996.jpg"
                       alt="Gran Canaria hiking"
                       fill
                       className="object-cover"
                       style={{ objectPosition: "center top" }}
-                      sizes="25vw"
+                      sizes="(max-width: 640px) 100vw, 33vw"
                     />
                   </div>
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden h-[260px] sm:h-[480px]">
                     <Image
                       src="/uploads/DSC08728.jpg"
                       alt="Tamaran rooftop event"
                       fill
                       className="object-cover"
                       style={{ objectPosition: "center top" }}
-                      sizes="25vw"
+                      sizes="(max-width: 640px) 100vw, 33vw"
                     />
                   </div>
-                  <div className="relative overflow-hidden">
+                  <div className="relative overflow-hidden h-[260px] sm:h-[480px]">
                     <Image
                       src="/uploads/DSC02326.jpg"
                       alt="Surfing Las Canteras"
                       fill
                       className="object-cover object-center"
-                      sizes="25vw"
+                      sizes="(max-width: 640px) 100vw, 33vw"
                     />
                   </div>
                 </div>
@@ -400,12 +397,9 @@ export default function TheHostelPage() {
         </section>
 
         {/* Activities */}
-        <section id="activities" style={{ background: "var(--sand)", padding: "120px 0" }}>
-          <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
-            <div
-              className="grid gap-10 items-end mb-16"
-              style={{ gridTemplateColumns: "1fr 1fr" }}
-            >
+        <section id="activities" className="py-16 md:py-[120px]" style={{ background: "var(--sand)" }}>
+          <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
+            <div className="grid gap-10 items-end mb-16 grid-cols-1 md:grid-cols-2">
               <div>
                 <RevealOnScroll>
                   <p className="text-[10px] font-medium tracking-[0.25em] uppercase mb-4" style={{ color: "var(--terra)" }}>
@@ -435,7 +429,7 @@ export default function TheHostelPage() {
               </RevealOnScroll>
             </div>
 
-            <div className="grid gap-[2px]" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
+            <div className="grid gap-[2px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
               {hostelActivities.map((a, i) => (
                 <RevealOnScroll key={a.num} delay={(i % 3) as 0 | 1 | 2}>
                   <div
@@ -476,12 +470,9 @@ export default function TheHostelPage() {
         </section>
 
         {/* Team */}
-        <section id="team" style={{ background: "var(--cream)", padding: "120px 0" }}>
-          <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
-            <div
-              className="grid gap-10 items-end mb-16"
-              style={{ gridTemplateColumns: "1fr 1fr" }}
-            >
+        <section id="team" className="py-16 md:py-[120px]" style={{ background: "var(--cream)" }}>
+          <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
+            <div className="grid gap-10 items-end mb-16 grid-cols-1 md:grid-cols-2">
               <div>
                 <RevealOnScroll>
                   <p className="text-[10px] font-medium tracking-[0.25em] uppercase mb-4" style={{ color: "var(--terra)" }}>
@@ -511,7 +502,7 @@ export default function TheHostelPage() {
               </RevealOnScroll>
             </div>
 
-            <div className="grid gap-6" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
+            <div className="grid gap-6 grid-cols-2 md:grid-cols-4">
               {team.map((member, i) => (
                 <RevealOnScroll key={member.name} delay={(i as 0 | 1 | 2 | 3)}>
                   <div className="text-center">
@@ -522,7 +513,7 @@ export default function TheHostelPage() {
                         fill
                         className="object-cover"
                         style={{ objectPosition: "center top" }}
-                        sizes="25vw"
+                        sizes="(max-width: 768px) 50vw, 25vw"
                       />
                     </div>
                     <div

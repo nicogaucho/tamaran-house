@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section
-      className="relative flex flex-col justify-end overflow-hidden"
-      style={{ height: "100vh", minHeight: 700, padding: "0 48px 72px" }}
+      className="relative flex flex-col justify-end overflow-hidden px-5 pb-14 sm:px-8 md:px-12 md:pb-[72px]"
+      style={{ height: "100vh", minHeight: 700 }}
     >
       {/* Background image */}
       <div className="absolute inset-0">
@@ -26,17 +26,14 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div
-        className="relative z-10 grid gap-10 items-end"
-        style={{ gridTemplateColumns: "1fr auto" }}
-      >
+      <div className="relative z-10 grid gap-10 items-end grid-cols-1 md:grid-cols-[1fr_auto]">
         <div>
           <Image
             src="/uploads/logo.png"
             alt="Tamaran House"
             width={300}
             height={100}
-            style={{ height: 100, width: "auto", marginBottom: 28, display: "block" }}
+            className="h-16 md:h-[100px] w-auto block mb-7"
             priority
           />
           <p
@@ -73,7 +70,7 @@ export default function Hero() {
             and dreamers become family.
           </p>
         </div>
-        <div className="flex flex-col items-end gap-4 pb-1">
+        <div className="flex flex-row justify-start gap-8 pt-6 md:flex-col md:items-end md:gap-4 md:pt-0 md:pb-1">
           {[
             { num: "50m", label: "From the beach" },
             { num: "4.9★", label: "Guest rating" },

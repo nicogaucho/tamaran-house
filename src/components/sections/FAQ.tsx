@@ -46,14 +46,11 @@ export default function FAQ() {
 
   return (
     <section
-      className="border-t"
-      style={{ background: "var(--cream)", padding: "120px 0", borderColor: "var(--rule)" }}
+      className="border-t py-16 md:py-[120px]"
+      style={{ background: "var(--cream)", borderColor: "var(--rule)" }}
     >
-      <div className="mx-auto" style={{ maxWidth: 1280, padding: "0 48px" }}>
-        <div
-          className="grid gap-10 items-end mb-16"
-          style={{ gridTemplateColumns: "1fr 1fr" }}
-        >
+      <div className="mx-auto px-5 sm:px-8 md:px-12" style={{ maxWidth: 1280 }}>
+        <div className="grid gap-10 items-end mb-16 grid-cols-1 md:grid-cols-2">
           <RevealOnScroll>
             <p className="text-[10px] font-medium tracking-[0.25em] uppercase mb-5" style={{ color: "var(--terra)" }}>
               Got Questions?
@@ -86,7 +83,7 @@ export default function FAQ() {
                 aria-expanded={open === i}
               >
                 <span
-                  className="text-[20px] leading-[1.3]"
+                  className="text-[16px] md:text-[20px] leading-[1.3]"
                   style={{
                     fontFamily: "var(--font-dm-serif), serif",
                     fontStyle: "italic",

@@ -12,12 +12,12 @@ const activities = [
 export default function Activities() {
   return (
     <section
-      className="border-t border-b"
-      style={{ background: "var(--cream)", padding: "80px 0", borderColor: "var(--rule)" }}
+      className="border-t border-b py-16 md:py-[80px]"
+      style={{ background: "var(--cream)", borderColor: "var(--rule)" }}
     >
       <div
-        className="mx-auto grid gap-20 items-center"
-        style={{ maxWidth: 1280, padding: "0 48px", gridTemplateColumns: "280px 1fr" }}
+        className="mx-auto grid gap-20 items-center px-5 sm:px-8 md:px-12 grid-cols-1 md:grid-cols-[280px_1fr]"
+        style={{ maxWidth: 1280 }}
       >
         {/* Intro */}
         <div>
@@ -45,7 +45,7 @@ export default function Activities() {
         </div>
 
         {/* Grid */}
-        <div className="grid gap-[2px]" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
+        <div className="grid gap-[2px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {activities.map((a, i) => (
             <RevealOnScroll key={a.num} delay={(i % 3) as 0 | 1 | 2 | 3}>
               <div

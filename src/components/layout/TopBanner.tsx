@@ -19,8 +19,8 @@ export default function TopBanner() {
         </strong>{" "}
         for 10% off
       </span>
-      <span style={{ opacity: 0.35 }}>|</span>
-      <span>
+      <span className="hidden sm:inline" style={{ opacity: 0.35 }}>|</span>
+      <span className="hidden sm:inline">
         <a
           href="mailto:tamaran.house@gmail.com"
           className="border-b transition-colors duration-200"
@@ -29,8 +29,8 @@ export default function TopBanner() {
           tamaran.house@gmail.com
         </a>
       </span>
-      <span style={{ opacity: 0.35 }}>|</span>
-      <span>
+      <span className="hidden sm:inline" style={{ opacity: 0.35 }}>|</span>
+      <span className="hidden sm:inline">
         WhatsApp{" "}
         <a
           href="https://wa.me/34673258236"

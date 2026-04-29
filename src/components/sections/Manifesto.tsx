@@ -2,10 +2,13 @@ import RevealOnScroll from "@/components/ui/RevealOnScroll";
 
 export default function Manifesto() {
   return (
-    <section className="overflow-hidden" style={{ background: "var(--ink)", padding: "120px 0" }}>
+    <section
+      className="overflow-hidden py-16 md:py-[120px]"
+      style={{ background: "var(--ink)" }}
+    >
       <div
-        className="mx-auto grid gap-20 items-center"
-        style={{ maxWidth: 1280, padding: "0 48px", gridTemplateColumns: "1fr 1fr" }}
+        className="mx-auto grid gap-20 items-center px-5 sm:px-8 md:px-12 grid-cols-1 md:grid-cols-2"
+        style={{ maxWidth: 1280 }}
       >
         {/* Left */}
         <div>

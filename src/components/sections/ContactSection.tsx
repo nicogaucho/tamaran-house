@@ -57,10 +57,10 @@ export default function ContactSection() {
   const [isPending, startTransition] = useTransition();
 
   return (
-    <section style={{ background: "var(--cream)", padding: "100px 0" }}>
+    <section className="py-16 md:py-[100px]" style={{ background: "var(--cream)" }}>
       <div
-        className="mx-auto grid gap-20 items-start"
-        style={{ maxWidth: 1280, padding: "0 48px", gridTemplateColumns: "1fr 1.4fr" }}
+        className="mx-auto grid gap-20 items-start px-5 sm:px-8 md:px-12 grid-cols-1 md:grid-cols-[1fr_1.4fr]"
+        style={{ maxWidth: 1280 }}
       >
         {/* Info column */}
         <div className="pt-2">
@@ -133,7 +133,7 @@ export default function ContactSection() {
         {/* Form column */}
         <RevealOnScroll>
           <div
-            className="p-12"
+            className="p-6 sm:p-8 md:p-12"
             style={{ background: "#fff", borderTop: "3px solid var(--terra)" }}
           >
             {submitted ? (
@@ -189,7 +189,7 @@ export default function ContactSection() {
                     });
                   }}
                 >
-                  <div className="grid gap-4 mb-5" style={{ gridTemplateColumns: "1fr 1fr" }}>
+                  <div className="grid gap-4 mb-5 grid-cols-1 sm:grid-cols-2">
                     <div className="flex flex-col gap-2">
                       <label
                         htmlFor="name"
