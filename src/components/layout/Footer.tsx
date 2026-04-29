@@ -63,7 +63,7 @@ export default function Footer() {
         className="max-w-[1280px] mx-auto flex justify-between items-center pt-8 text-[12px]"
         style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
       >
-        <span>© 2025 Tamaran House Hostel — Las Palmas de Gran Canaria</span>
+        <span>Tamaran House © 2022  — Las Palmas de Gran Canaria <br /> Copyright © 2026 Digital Consulting Agüita SL. All rights reserved. - This software was developed for Tamaran House / Agüita Canarias SL</span>
         <a href="#" className="no-underline" style={{ color: "rgba(255,255,255,0.4)" }}>Privacy Policy</a>
       </div>
     </footer>

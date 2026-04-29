@@ -1,3 +1,7 @@
+> ⚠️ **Proprietary Software** — This repository contains confidential source code
+> developed for Tamaran House / Agüita Canarias SL. All rights reserved.
+> Unauthorized use, copying, or distribution is strictly prohibited.
+
 # Tamaran House — Marketing Website
 
 Surf hostel marketing site for **Tamaran House**, Las Palmas de Gran Canaria.
