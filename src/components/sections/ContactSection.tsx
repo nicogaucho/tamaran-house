@@ -28,8 +28,8 @@ const channels = [
   },
   {
     type: "Instagram",
-    label: "@tamaranhouse",
-    href: "https://instagram.com/tamaranhouse",
+    label: "@tamaran_house",
+    href: "https://www.instagram.com/tamaran_house?igsh=aDM1eDlxMTk4ZHFu",
     icon: (
       <svg viewBox="0 0 24 24" style={{ width: 18, height: 18, stroke: "var(--terra)", fill: "none", strokeWidth: 1.5 }}>
         <rect x="2" y="2" width="20" height="20" rx="5" />

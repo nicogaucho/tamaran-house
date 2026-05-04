@@ -30,7 +30,7 @@ export function LodgingJsonLd() {
       { "@type": "LocationFeatureSpecification", name: "Yoga sessions", value: true },
       { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
     ],
-    sameAs: ["https://www.instagram.com/tamaranhouse"],
+    sameAs: ["https://www.instagram.com/tamaran_house?igsh=aDM1eDlxMTk4ZHFu"],
   };
   return (
     <script

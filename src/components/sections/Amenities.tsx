@@ -39,7 +39,7 @@ const amenities = [
     ),
   },
   {
-    name: "Washing Machine",
+    name: "Laundry service",
     icon: (
       <svg className="w-9 h-9 opacity-50" viewBox="0 0 36 36" fill="none" stroke="white" strokeWidth="1.5">
         <rect x="7" y="8" width="22" height="20" rx="2"/>
@@ -84,7 +84,7 @@ export default function Amenities() {
             className="text-[10px] font-medium tracking-[0.25em] uppercase mb-10"
             style={{ color: "var(--coral)" }}
           >
-            Everything Included
+            Hostel amenities
           </p>
         </RevealOnScroll>
         <div

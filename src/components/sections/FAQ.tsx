@@ -5,14 +5,14 @@ import RevealOnScroll from "@/components/ui/RevealOnScroll";
 
 const faqs = [
   {
-    question: "Do you offer surf lessons for beginners and advanced surfers?",
+    question: "Do you offer surf lessons for beginners and intermediate surfers?",
     answer:
-      "Yes! We partner with Ocean Side, one of the best surf schools in Las Palmas. They offer lessons for all levels — from total beginners to those looking to sharpen their technique. As a Tamaran guest you get exclusive discounts.",
+      "Yes! We are partner with Ocean Side, one of the best surf schools in Las Palmas. They offer lessons for all levels — from total beginners to those looking to sharpen their technique.",
   },
   {
     question: "Can I rent surfboards at your surf house?",
     answer:
-      "Absolutely. Through our partner Ocean Side you can rent surfboards, wetsuits and all the gear you need. El Confital, one of the best surf spots on the island, is just 900m away.",
+      "Through our partner Ocean Side you can rent surfboards, wetsuits and all the gear you need. La Cicer, one of the best surf spots on the island, is just 900m away.",
   },
   {
     question: "Do you offer sports equipment rental for guests?",
@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "What weekly activities are available at the surf house?",
     answer:
-      "Our team organizes daily activities for guests: group dinners, city tours, beach days, yoga sessions, kayaking, surf trips and more. We also add you to our hostel WhatsApp group so you never miss anything.",
+      "Our team organizes daily activities for guests: group dinners, city tours, beach days, yoga sessions, kayaking, surf trips and more on previous request. We also add you to our hostel WhatsApp group so you never miss anything.",
   },
   {
     question: "Can you recommend the best places to visit on the island?",

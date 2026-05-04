@@ -56,11 +56,8 @@ export default function Manifesto() {
               <em style={{ fontFamily: "var(--font-dm-serif), serif", fontStyle: "italic", color: "var(--surf)" }}>buena vibra</em>{" "}
               of a city that embraces travelers from all over the world.
             </p>
-            <p className="text-[17px] leading-[1.75]" style={{ color: "rgba(255,255,255,0.65)" }}>
-              <strong className="font-medium" style={{ color: "#fff" }}>All of this, we want to celebrate together.</strong>
-            </p>
             <div className="flex flex-wrap gap-2.5 mt-9">
-              {["Travelers", "Surfers", "Backpackers", "Digital Nomads", "Adventurersº"].map((tag) => (
+              {["Solo Travelers", "Surfers", "Backpackers", "Digital Nomads", "Adventurersº"].map((tag) => (
                 <span
                   key={tag}
                   className="text-[11px] font-medium tracking-[0.1em] uppercase px-[18px] py-2"

@@ -52,9 +52,7 @@ export default function Footer() {
             Follow
           </div>
           <ul className="list-none p-0 flex flex-col gap-2.5">
-            <li><a href="https://instagram.com/tamaranhouse" target="_blank" rel="noopener noreferrer" className="text-[13px] no-underline transition-colors duration-200 hover:text-white" style={{ color: "rgba(255,255,255,0.45)" }}>Instagram</a></li>
-            <li><a href="#" className="text-[13px] no-underline transition-colors duration-200 hover:text-white" style={{ color: "rgba(255,255,255,0.45)" }}>YouTube</a></li>
-            <li><a href="#" className="text-[13px] no-underline transition-colors duration-200 hover:text-white" style={{ color: "rgba(255,255,255,0.45)" }}>TikTok</a></li>
+            <li><a href="https://www.instagram.com/tamaran_house?igsh=aDM1eDlxMTk4ZHFu" target="_blank" rel="noopener noreferrer" className="text-[13px] no-underline transition-colors duration-200 hover:text-white" style={{ color: "rgba(255,255,255,0.45)" }}>Instagram</a></li>
           </ul>
         </div>
       </div>

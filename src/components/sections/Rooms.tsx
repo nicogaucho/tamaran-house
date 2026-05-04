@@ -12,14 +12,14 @@ const rooms = [
   },
   {
     name: "Private Room",
-    desc: "The privacy of your own room with all the great vibes of a social hostel. Beach views included.",
+    desc: "Perfect for couples or solo travelers who want a bit more comfort.",
     price: "€65 / night",
     img: "/uploads/image00006.jpeg",
     badge: null,
   },
   {
     name: "Master Private",
-    desc: "Wake up to a great ocean view. Private balcony, double bed, and everything you need to work and rest.",
+    desc: "Wake up to a great ocean view. Double bed, and everything you need to work and rest.",
     price: "€85 / night",
     img: "/uploads/Private.jpg",
     badge: { label: "Best Views", bg: "var(--ocean)" },

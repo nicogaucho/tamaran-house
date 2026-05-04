@@ -9,7 +9,7 @@ const stats = [
   {
     num: "900m",
     title: "Best Surfing Spot",
-    desc: "El Confital, perfect waves year round",
+    desc: "La Cicer, perfect waves year round",
   },
   {
     num: "1.2km",

@@ -2,23 +2,23 @@ import RevealOnScroll from "@/components/ui/RevealOnScroll";
 
 const testimonials = [
   {
-    text: '"A beach location in a larger city is simply unbeatable. The individual room with private balcony is a star if you prefer privacy and need to work."',
-    author: "Kerstin — Germany",
+    text: "\"Location is perfect. The staff is really friendly and helpful; it's more like a family. It's clean and nice, and the volunteers are putting in so much effort to get a place going right.\"",
+    author: "Łukasz Karpow (siwy)",
     dark: true,
   },
   {
-    text: '"Daily activities organized by the hostel meant I was always meeting volunteers and other travelers. I would definitely stay here again!"',
-    author: "Lisa — Finland",
+    text: `We loved this hostel. Amazing terrace, adorable staff. Location can’t be more perfect. I totally recommend the private dorm in the rooftop, it has an amazing view.`,
+    author: "Fiama Manzolillo",
     dark: false,
   },
   {
-    text: '"Perfect to practice surfing and water activities. Next to a wonderful beach and in the center of town with everything you want."',
-    author: "Alberto — Italy",
+    text: '"Thank you to Omar and the rest of the Volunteers who made my stay soo lovely . Such friendly people and great activities to do. Bonus was that it was by the sea. I would defo come back.',
+    author: "graciela lane yana'",
     dark: false,
   },
   {
-    text: '"Great staff who organized activities every day so I was never bored. Great location right next to the beach."',
-    author: "Kamil — Poland",
+    text: '"Tamaran is a wonderful hostel to stay at! It has a very "family" like feeling to it with different activities to join in and so many friendly people and staff. The vibes all around were amazing :)"',
+    author: "Carlie",
     dark: false,
   },
 ];
@@ -56,13 +56,13 @@ export default function Testimonials() {
                 className="leading-none"
                 style={{ fontFamily: "var(--font-bebas), sans-serif", fontSize: 56, color: "var(--terra)" }}
               >
-                9.8
+                9.0
               </div>
               <div className="text-[12px] leading-[1.6]" style={{ color: "var(--muted)" }}>
                 <div className="tracking-[2px] text-[14px]" style={{ color: "var(--terra)" }}>★★★★★</div>
                 Based on 200+ reviews
                 <br />
-                on Hostelworld &amp; Booking
+                on Hostelworld &amp; Booking &amp; Google
               </div>
             </div>
           </RevealOnScroll>
@@ -72,33 +72,40 @@ export default function Testimonials() {
         <div className="grid gap-[2px] grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
           {testimonials.map((t, i) => (
             <RevealOnScroll key={i} delay={(i as 0 | 1 | 2 | 3)}>
-              <div
-                className="p-8 flex flex-col justify-between"
-                style={{
-                  background: t.dark ? "var(--ink)" : "#fff",
-                  minHeight: 220,
-                }}
+              <a
+                href="https://www.google.com/travel/search?gsas=1&ts=GhwSGhIUCgcI6g8QBRgXEgcI6g8QBRgYGAEyAhAA&qs=MjZDaVFJaFBESXMtdm05ZWkwQVJDYjc2dk0ySU9OOW5nYURTOW5MekV4Y0RBMGNtMXFkSElRQVE4Ag&ap=ugEHcmV2aWV3cw&ictx=111&biw=1470&bih=831&ved=0CAAQ5JsGahcKEwiI3v26-J-UAxUAAAAAHQAAAAAQBQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block no-underline transition-opacity duration-200 hover:opacity-80"
               >
-                <p
-                  className="text-[15px] leading-[1.65] flex-1 mb-5"
-                  style={{
-                    fontFamily: "var(--font-dm-serif), serif",
-                    fontStyle: "italic",
-                    color: t.dark ? "rgba(255,255,255,0.85)" : "var(--ink)",
-                  }}
-                >
-                  {t.text}
-                </p>
                 <div
-                  className="text-[11px] font-medium tracking-[0.1em] uppercase pt-4"
+                  className="p-8 flex flex-col justify-between"
                   style={{
-                    color: t.dark ? "rgba(255,255,255,0.4)" : "var(--muted)",
-                    borderTop: t.dark ? "1px solid rgba(255,255,255,0.1)" : "1px solid var(--rule)",
+                    background: t.dark ? "var(--ink)" : "#fff",
+                    minHeight: 220,
                   }}
                 >
-                  {t.author}
+                  <p
+                    className="text-[15px] leading-[1.65] flex-1 mb-5"
+                    style={{
+                      fontFamily: "var(--font-dm-serif), serif",
+                      fontStyle: "italic",
+                      color: t.dark ? "rgba(255,255,255,0.85)" : "var(--ink)",
+                    }}
+                  >
+                    {t.text}
+                  </p>
+                  <div
+                    className="text-[11px] font-medium tracking-[0.1em] uppercase pt-4"
+                    style={{
+                      color: t.dark ? "rgba(255,255,255,0.4)" : "var(--muted)",
+                      borderTop: t.dark ? "1px solid rgba(255,255,255,0.1)" : "1px solid var(--rule)",
+                    }}
+                  >
+                    {t.author}
+                  </div>
                 </div>
-              </div>
+              </a>
             </RevealOnScroll>
           ))}
         </div>
