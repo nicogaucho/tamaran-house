@@ -78,6 +78,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://tamaranhouse.com",
   },
+  verification: {
+    google: "AiVUTOzKuTD9Vs5ASvY49LVWkjPg8jE-ynwS1uHnB_M",
+  },
 };
 
 export default function RootLayout({
