@@ -85,7 +85,7 @@ export default function ContactSection() {
           </RevealOnScroll>
           <RevealOnScroll delay={2}>
             <p className="text-[15px] leading-[1.75] mb-10 max-w-[340px]" style={{ color: "var(--muted)" }}>
-              Whether you have questions about your stay, want to book a room, or just want to know more about Tamaran — we&apos;re
+              Whether you have questions about your stay, want to book a room, or just want to know more about Tamaran. We&apos;re
               here for you.
             </p>
           </RevealOnScroll>

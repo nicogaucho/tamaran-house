@@ -89,7 +89,7 @@ export default function RoomsPage() {
         <PrivateRoomsSection />
 
         <CTASection
-          eyebrow="Ready to be brave?"
+          eyebrow="Ready to live the adeventure?"
           title={"Book Your\nStay"}
           subtitle="Beds are filling up fast. Grab yours and join the Tamaran family."
           primaryLabel="Reserve a Room"

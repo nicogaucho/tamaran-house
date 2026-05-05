@@ -18,9 +18,9 @@ const rooms = [
     badge: null,
   },
   {
-    name: "Master Private",
+    name: "Ocean view Private",
     desc: "Wake up to a great ocean view. Double bed, and everything you need to work and rest.",
-    price: "€85 / night",
+    price: "€65 / night",
     img: "/uploads/Private.jpg",
     badge: { label: "Best Views", bg: "var(--ocean)" },
   },

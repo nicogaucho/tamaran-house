@@ -22,7 +22,7 @@ export default function Footer() {
             className="text-[15px] leading-relaxed max-w-[240px]"
             style={{ fontFamily: "var(--font-dm-serif), serif", fontStyle: "italic", color: "rgba(255,255,255,0.35)" }}
           >
-            The land of the braves — a surf hostel in the heart of Las Palmas.
+            A surf hostel in the heart of Las Palmas.
           </p>
         </div>
         <div>

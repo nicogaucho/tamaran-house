@@ -57,7 +57,7 @@ export default function ContactPage() {
                 color: "rgba(255,255,255,0.55)",
               }}
             >
-              We&apos;re always happy to hear from you — questions, bookings, or just to say hi.
+              We&apos;re always happy to hear from you. Questions, bookings, or just to say hi.
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function ContactPage() {
         <ContactSection />
 
         <CTASection
-          eyebrow="Ready to be brave?"
+          eyebrow="Ready to live the adventure?"
           title={"Book Your\nStay"}
           subtitle="Beds are filling up fast. Grab yours and join the Tamaran family."
           primaryLabel="Reserve a Room"

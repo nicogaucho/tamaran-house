@@ -59,7 +59,7 @@ export const dorms: Room[] = [
       { icon: iconWifi, label: "Free WiFi" },
       { icon: iconLocker, label: "Locker" },
     ],
-    desc: "Bright and airy dorm perfect for meeting fellow travelers. Lockers, reading lights and USB ports at every bunk. Shared bathrooms are kept spotless.",
+    desc: "Bright and airy dorm perfect for meeting fellow travelers. Lockers, reading lights and plugs at every bunk. Shared bathrooms are kept spotless.",
     price: "€25 / night",
     img: "/uploads/Fuerteventura2.jpg",
     images: ["/uploads/Fuerteventura1.jpg", "/uploads/Fuerteventura2.jpg"],
@@ -80,7 +80,7 @@ export const dorms: Room[] = [
     badges: [{ label: "Shared Bathroom", variant: "terra" }],
   },
   {
-    island: "Gomera",
+    island: "La Gomera",
     typeLabel: "4-Bed Dorm",
     features: [
       { icon: iconBed, label: "4 bunk beds" },
@@ -92,7 +92,7 @@ export const dorms: Room[] = [
     price: "€30 / night",
     img: "/uploads/Gomera2.jpg",
     images: ["/uploads/Gomera1.jpg", "/uploads/Gomera2.jpg"],
-    badges: [{ label: "Bathroom In Room", variant: "dark" }],
+    badges: [{ label: "Bathroom In Room", variant: "terra" }],
   },
   {
     island: "Tenerife",
@@ -107,7 +107,7 @@ export const dorms: Room[] = [
     price: "€30 / night",
     img: "/uploads/Tenerife1.jpg",
     images: ["/uploads/Tenerife1.jpg", "/uploads/Tenerife2.jpg", "/uploads/Tenerife3.jpg"],
-    badges: [{ label: "Bathroom In Room", variant: "dark" }],
+    badges: [{ label: "Bathroom In Room", variant: "terra" }],
   },
 ];
 
@@ -118,14 +118,15 @@ export const privateRooms: Room[] = [
     features: [
       { icon: iconBed, label: "Double bed" },
       { icon: iconBalcony, label: "Private balcony" },
-      { icon: iconBath, label: "En-suite bathroom" },
+      { icon: iconBath, label: "Shared bathroom" },
       { icon: iconWifi, label: "Free WiFi" },
     ],
     desc: "Named after the 'Beautiful Island'. A bright double room with your own private balcony — perfect for couples or solo travelers who want a little more space and privacy.",
     price: "€65 / night",
     img: "/uploads/LaPalma.jpeg",
     badges: [
-      { label: "Double Bed", variant: "terra" },
+      { label: "Double Bed", variant: "ocean" },
+      { label: "Shared Bathroom", variant: "terra" },
       { label: "Balcony", variant: "dark" },
     ],
   },
@@ -134,14 +135,14 @@ export const privateRooms: Room[] = [
     typeLabel: "Double Private Room",
     features: [
       { icon: iconBed, label: "Double bed" },
-      { icon: iconBath, label: "En-suite bathroom" },
+      { icon: iconBath, label: "Shared bathroom" },
       { icon: iconWifi, label: "Free WiFi" },
       { icon: iconLocker, label: "Locker" },
     ],
-    desc: "Cozy and intimate, El Hierro is your private sanctuary in the heart of Las Palmas. All the hostel vibe with the privacy of your own room and en-suite bathroom.",
+    desc: "Cozy and intimate, El Hierro is your private sanctuary in the heart of Las Palmas. All the hostel vibe with the privacy of your own room",
     price: "€65 / night",
     img: "/uploads/image00006.jpeg",
-    badges: [{ label: "Double Bed", variant: "terra" }],
+    badges: [{ label: "Double Bed", variant: "ocean" }, { label: "Shared Bathroom", variant: "terra" },],
   },
   {
     island: "Gran Canaria",
@@ -159,6 +160,7 @@ export const privateRooms: Room[] = [
     images: ["/uploads/Private.jpg", "/uploads/GalleryRoom.jpg"],
     badges: [
       { label: "Ocean View", variant: "ocean" },
+      { label: "Bathroom In Room", variant: "terra" },
       { label: "Balcony", variant: "dark" },
     ],
   },

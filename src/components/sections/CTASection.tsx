@@ -14,7 +14,7 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  eyebrow = "Ready to be brave?",
+  eyebrow = "Ready to live the adventure?",
   title = "Your Adventure\nStarts Here",
   subtitle = "Join our community of surfers, dreamers, and adventurers in the heart of Las Palmas.",
   primaryLabel = "Book Your Stay",

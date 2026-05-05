@@ -35,14 +35,14 @@ const hostelActivities = [
   {
     num: "01",
     name: "Surf Lessons",
-    desc: "Partner with Ocean Side surf school for lessons at all levels. El Confital, one of the island's best breaks, is just 900m away. Exclusive discounts for Tamaran guests.",
-    tag: "Daily",
+    desc: "Partner with Ocean Side surf school for lessons at all levels. La Cicer, one of the island's best breaks, is just 900m away.",
+    tag: "On request",
   },
   {
     num: "02",
     name: "Yoga & Wellness",
-    desc: "Morning yoga sessions on the rooftop terrace with panoramic ocean views. Open to all levels. Start your day with intention and a sea breeze.",
-    tag: "Weekly",
+    desc: "Morning yoga sessions on the closet beach. Open to all levels. Start your day with intention and a sea breeze.",
+    tag: "On request",
   },
   {
     num: "03",
@@ -59,8 +59,8 @@ const hostelActivities = [
   {
     num: "05",
     name: "Island Excursions",
-    desc: "From the Roque Nublo to the Maspalomas dunes, Gran Canaria has landscapes that will take your breath away. We organize group trips for guests every week.",
-    tag: "Weekly",
+    desc: "From the Roque Nublo to the Maspalomas dunes, Gran Canaria has landscapes that will take your breath away. We can organize group trips for guests with external partners.",
+    tag: "On request",  
   },
   {
     num: "06",
@@ -74,14 +74,14 @@ const team = [
   {
     name: "Damiano",
     role: "Co-Founder",
-    bio: "Tourist guide, storyteller, and the heart of Tamaran House.",
+    bio: "Tourist guide, storyteller, longboarder and the heart of Tamaran House.",
     img: "/uploads/Damiano.png",
     alt: "Damiano — Co-Founder of Tamaran House",
   },
   {
     name: "Eugenie",
     role: "Manager & Operations",
-    bio: "She makes sure everything runs smoothly.",
+    bio: "Video maker, She makes sure everything runs smoothly.",
     img: "/uploads/Eugenie.jpeg",
     alt: "Eugenie — Manager & Operations at Tamaran House",
   },
@@ -172,7 +172,7 @@ export default function TheHostelPage() {
                 color: "rgba(255,255,255,0.6)",
               }}
             >
-              A place for the braves. Our story, our island, our team.
+              Our story, our island, our team.
             </p>
           </div>
         </section>
