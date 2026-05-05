@@ -12,6 +12,7 @@ export interface Room {
   desc: string;
   price: string;
   img: string | null;
+  images?: string[];
   badges: { label: string; variant: "terra" | "dark" | "ocean" }[];
 }
 
@@ -42,6 +43,11 @@ const iconBalcony = (
     <polyline points="9 22 9 12 15 12 15 22" />
   </svg>
 );
+const iconOcean = (
+  <svg viewBox="0 0 24 24" style={{ width: 14, height: 14, stroke: "var(--terra)", fill: "none", strokeWidth: 1.5, flexShrink: 0 }}>
+    <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+  </svg>
+);
 
 export const dorms: Room[] = [
   {
@@ -55,7 +61,8 @@ export const dorms: Room[] = [
     ],
     desc: "Bright and airy dorm perfect for meeting fellow travelers. Lockers, reading lights and USB ports at every bunk. Shared bathrooms are kept spotless.",
     price: "€25 / night",
-    img: "/uploads/Fuerteventura.jpg",
+    img: "/uploads/Fuerteventura2.jpg",
+    images: ["/uploads/Fuerteventura1.jpg", "/uploads/Fuerteventura2.jpg"],
     badges: [{ label: "Shared Bathroom", variant: "terra" }],
   },
   {
@@ -83,7 +90,8 @@ export const dorms: Room[] = [
     ],
     desc: "Upgraded dorm with a private en-suite bathroom shared only with your dorm mates. More comfort, same great social atmosphere.",
     price: "€30 / night",
-    img: "/uploads/Gomera.jpg",
+    img: "/uploads/Gomera2.jpg",
+    images: ["/uploads/Gomera1.jpg", "/uploads/Gomera2.jpg"],
     badges: [{ label: "Bathroom In Room", variant: "dark" }],
   },
   {
@@ -97,7 +105,8 @@ export const dorms: Room[] = [
     ],
     desc: "Our most popular dorm. Named after Spain's tallest peak, it feels spacious and bright. En-suite bathroom and extra storage for surfers with gear.",
     price: "€30 / night",
-    img: "/uploads/Tenerife.jpg",
+    img: "/uploads/Tenerife1.jpg",
+    images: ["/uploads/Tenerife1.jpg", "/uploads/Tenerife2.jpg", "/uploads/Tenerife3.jpg"],
     badges: [{ label: "Bathroom In Room", variant: "dark" }],
   },
 ];
@@ -133,5 +142,24 @@ export const privateRooms: Room[] = [
     price: "€65 / night",
     img: "/uploads/image00006.jpeg",
     badges: [{ label: "Double Bed", variant: "terra" }],
+  },
+  {
+    island: "Gran Canaria",
+    typeLabel: "Ocean view Private Room",
+    features: [
+      { icon: iconBed, label: "Double bed" },
+      { icon: iconBalcony, label: "Private balcony" },
+      { icon: iconOcean, label: "Ocean view" },
+      { icon: iconBath, label: "En-suite bathroom" },
+      { icon: iconWifi, label: "Fast WiFi" },
+    ],
+    desc: "Wake up to the sound of the ocean. A double bed, premium linens, en-suite bathroom, and the most spectacular ocean view.",
+    price: "€65 / night",
+    img: "/uploads/Private.jpg",
+    images: ["/uploads/Private.jpg", "/uploads/GalleryRoom.jpg"],
+    badges: [
+      { label: "Ocean View", variant: "ocean" },
+      { label: "Balcony", variant: "dark" },
+    ],
   },
 ];

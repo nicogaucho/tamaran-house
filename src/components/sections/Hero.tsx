@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/uploads/ImageHero.jpg"
+          src="/uploads/Hero.jpg"
           alt="Tamaran House surf hostel — Las Palmas de Gran Canaria"
           fill
           priority

@@ -4,48 +4,102 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Room } from "@/components/sections/rooms-data";
 
-export function RoomCard({ room, dark = false }: { room: Room; dark?: boolean }) {
+export function RoomCard({
+  room,
+  dark = false,
+  onImageClick,
+}: {
+  room: Room;
+  dark?: boolean;
+  onImageClick?: () => void;
+}) {
   const borderTopColor = dark ? "var(--coral)" : "var(--terra)";
+
+  const imageContent = (
+    <>
+      {room.img ? (
+        <Image
+          src={room.img}
+          alt={room.island}
+          fill
+          className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      ) : (
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(0,0,0,0.03) 18px, rgba(0,0,0,0.03) 19px)",
+          }}
+        />
+      )}
+      {room.badges.length > 0 && (
+        <div className="absolute top-4 left-4 flex gap-2 flex-wrap">
+          {room.badges.map((b) => (
+            <span
+              key={b.label}
+              className="text-white text-[9px] font-medium tracking-[0.12em] uppercase px-3 py-1.5"
+              style={{
+                background: b.variant === "terra" ? "var(--terra)" : b.variant === "ocean" ? "var(--ocean)" : "var(--ink)",
+                borderRadius: "100px",
+              }}
+            >
+              {b.label}
+            </span>
+          ))}
+        </div>
+      )}
+      {onImageClick && (
+        <div
+          className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          style={{ background: "rgba(10,16,24,0.35)" }}
+          aria-hidden="true"
+        >
+          <span className="text-white text-[10px] font-medium tracking-[0.2em] uppercase flex items-center gap-2">
+            <svg viewBox="0 0 24 24" style={{ width: 16, height: 16, stroke: "#fff", fill: "none", strokeWidth: 1.5 }}>
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+            </svg>
+            View more photos
+          </span>
+        </div>
+      )}
+      {room.images && room.images.length > 1 && (
+        <div
+          className="absolute bottom-3 right-3 flex items-center gap-1 px-2.5 py-1 text-white text-[9px] font-medium tracking-[0.1em] uppercase"
+          style={{ background: "rgba(10,16,24,0.65)", borderRadius: 100 }}
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 24 24" style={{ width: 10, height: 10, stroke: "#fff", fill: "none", strokeWidth: 2 }}>
+            <rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" />
+          </svg>
+          {room.images.length} photos
+        </div>
+      )}
+    </>
+  );
 
   return (
     <div
       className="overflow-hidden transition-transform duration-300 hover:-translate-y-[3px] flex flex-col"
       style={{ background: dark ? "rgba(255,255,255,0.04)" : "#fff", border: dark ? "1px solid rgba(255,255,255,0.08)" : "none" }}
     >
-      <div className="relative overflow-hidden flex-shrink-0" style={{ height: 340, background: "var(--sand)" }}>
-        {room.img ? (
-          <Image
-            src={room.img}
-            alt={room.island}
-            fill
-            className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        ) : (
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(0,0,0,0.03) 18px, rgba(0,0,0,0.03) 19px)",
-            }}
-          />
-        )}
-        {room.badges.length > 0 && (
-          <div className="absolute top-4 left-4 flex gap-2 flex-wrap">
-            {room.badges.map((b) => (
-              <span
-                key={b.label}
-                className="text-white text-[9px] font-medium tracking-[0.12em] uppercase px-3 py-1.5"
-                style={{
-                  background: b.variant === "terra" ? "var(--terra)" : b.variant === "ocean" ? "var(--ocean)" : "var(--ink)",
-                  borderRadius: "100px",
-                }}
-              >
-                {b.label}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
+      {onImageClick ? (
+        <button
+          type="button"
+          onClick={onImageClick}
+          aria-label={`View ${room.island} room photos`}
+          className="relative overflow-hidden flex-shrink-0 w-full group"
+          style={{ height: 340, background: "var(--sand)", border: "none", borderRadius: 0, padding: 0, display: "block", cursor: "zoom-in" }}
+        >
+          {imageContent}
+        </button>
+      ) : (
+        <div className="relative overflow-hidden flex-shrink-0" style={{ height: 340, background: "var(--sand)" }}>
+          {imageContent}
+        </div>
+      )}
       <div
         className="p-8 flex-1 flex flex-col"
         style={{ borderTop: `2px solid ${borderTopColor}` }}
