@@ -5,7 +5,7 @@ import RevealOnScroll from "@/components/ui/RevealOnScroll";
 const rooms = [
   {
     name: "4-Bed Dorm",
-    desc: "Forget overcrowded dorms. Ours are spacious, clean, and social — with lockers in every room.",
+    desc: "Forget overcrowded dorms. Ours are spacious, clean, and social with lockers in every room.",
     price: "€25 / night",
     img: "/uploads/Tenerife2.jpg",
     badge: { label: "Most Popular", bg: "var(--terra)" },

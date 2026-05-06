@@ -71,7 +71,7 @@ export default function Spaces() {
             <RevealOnScroll>
               <p className="text-[16px] leading-[1.75] max-w-[420px]" style={{ color: "var(--muted)" }}>
                 Designed for fun, relaxation and work. Three 4-bed dorms, three private rooms with beach views, a sunny rooftop,
-                and a fully equipped kitchen — you&apos;ll feel right at home.
+                and a fully equipped kitchen. You&apos;ll feel right at home.
               </p>
             </RevealOnScroll>
           </div>

@@ -41,7 +41,7 @@ export default function Manifesto() {
           <div>
             <p className="text-[17px] leading-[1.75] mb-6" style={{ color: "rgba(255,255,255,0.65)" }}>
               <em style={{ fontFamily: "var(--font-dm-serif), serif", fontStyle: "italic", color: "var(--surf)" }}>Tamarán</em>{" "}
-              is the ancient name of Gran Canaria —{" "}
+              is the ancient name of Gran Canaria:{" "}
               <strong className="font-medium" style={{ color: "#fff" }}>&ldquo;the land of the guanches.&rdquo;</strong>
             </p>
             <p className="text-[17px] leading-[1.75] mb-6" style={{ color: "rgba(255,255,255,0.65)" }}>

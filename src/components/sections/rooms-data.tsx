@@ -74,7 +74,7 @@ export const dorms: Room[] = [
       { icon: iconWifi, label: "Free WiFi" },
       { icon: iconLocker, label: "Locker" },
     ],
-    desc: "Named after the volcanic island, this dorm has a warm, earthy atmosphere. Great natural light and a social vibe — perfect for solo travelers.",
+    desc: "Named after the volcanic island, this dorm has a warm, earthy atmosphere. Great natural light and a social vibe, perfect for solo travelers.",
     price: "€25 / night",
     img: "/uploads/Lanzarote.jpg",
     badges: [{ label: "Shared Bathroom", variant: "terra" }],
@@ -121,7 +121,7 @@ export const privateRooms: Room[] = [
       { icon: iconBath, label: "Shared bathroom" },
       { icon: iconWifi, label: "Free WiFi" },
     ],
-    desc: "Named after the 'Beautiful Island'. A bright double room with your own private balcony — perfect for couples or solo travelers who want a little more space and privacy.",
+    desc: "Named after the 'Beautiful Island'. A bright double room with your own private balcony, perfect for couples or solo travelers who want a little more space and privacy.",
     price: "€65 / night",
     img: "/uploads/LaPalma.jpeg",
     badges: [

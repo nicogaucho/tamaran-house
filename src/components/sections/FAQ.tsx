@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "Do you offer surf lessons for beginners and intermediate surfers?",
     answer:
-      "Yes! We are partner with Ocean Side, one of the best surf schools in Las Palmas. They offer lessons for all levels — from total beginners to those looking to sharpen their technique.",
+      "Yes! We are partner with Ocean Side, one of the best surf schools in Las Palmas. They offer lessons for all levels from total beginners to those looking to sharpen their technique.",
   },
   {
     question: "Can I rent surfboards at your surf house?",
@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "Do you offer sports equipment rental for guests?",
     answer:
-      "Yes — we offer free use of snorkeling gear, beach volleyball equipment and more. Just ask at reception and we'll set you up.",
+      "Yes. We offer free use of snorkeling gear, beach volleyball equipment and more. Just ask at reception and we'll set you up.",
   },
   {
     question: "What weekly activities are available at the surf house?",
@@ -27,12 +27,12 @@ const faqs = [
   {
     question: "Can you recommend the best places to visit on the island?",
     answer:
-      "Definitely — our staff knows Gran Canaria inside out. From hidden beaches to mountain trails, local restaurants and night spots, we're always happy to share our favourite tips. Just ask at reception!",
+      "Definitely. Our staff knows Gran Canaria inside out. From hidden beaches to mountain trails, local restaurants and night spots, we're always happy to share our favourite tips. Just ask at reception!",
   },
   {
     question: "What are the main attractions near the property?",
     answer:
-      "Las Canteras beach is just 50m away — one of the best urban beaches in Europe. The historic Vegueta quarter, the Triana shopping district, great restaurants and bars are all within easy walking distance.",
+      "Las Canteras beach is just 50m away, one of the best urban beaches in Europe. The historic Vegueta quarter, the Triana shopping district, great restaurants and bars are all within easy walking distance.",
   },
   {
     question: "How can I collaborate or partner with your surf house?",

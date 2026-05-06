@@ -1,9 +1,9 @@
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 
 const activities = [
-  { num: "01", name: "Surf Lessons", desc: "Organized with external surf school. Available on request — just ask at reception. All levels welcome." },
-  { num: "02", name: "Yoga & Wellness", desc: "Morning sessions on the closest beach with ocean breeze. Available on request — just ask at reception" },
-  { num: "03", name: "Kayaking", desc: "Explore the Canarian coastline with new friends. Available on request — just ask at reception" },
+  { num: "01", name: "Surf Lessons", desc: "Organized with external surf school. Available on request. Just ask at reception. All levels welcome." },
+  { num: "02", name: "Yoga & Wellness", desc: "Morning sessions on the closest beach with ocean breeze. Available on request. Just ask at reception" },
+  { num: "03", name: "Kayaking", desc: "Explore the Canarian coastline with new friends. Available on request. Just ask at reception" },
   { num: "04", name: "Snorkeling", desc: "Free gear rental. Las Canteras is a natural reef." },
   { num: "05", name: "Group Dinners", desc: "Family-style meals where strangers become friends." },
   { num: "06", name: "City Nights", desc: "Best bars, concerts, and events in Las Palmas." },

@@ -10,6 +10,7 @@ import Activities from "@/components/sections/Activities";
 import Rooms from "@/components/sections/Rooms";
 import Amenities from "@/components/sections/Amenities";
 import FAQ from "@/components/sections/FAQ";
+import Partners from "@/components/sections/Partners";
 import Location from "@/components/sections/Location";
 import Testimonials from "@/components/sections/Testimonials";
 import CTASection from "@/components/sections/CTASection";
@@ -39,6 +40,7 @@ export default function Home() {
         <Rooms />
         <Amenities />
         <FAQ />
+        <Partners />
         <Location />
         <Testimonials />
         <CTASection />

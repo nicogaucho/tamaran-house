@@ -4,7 +4,7 @@ const stats = [
   {
     num: "50m",
     title: "Las Canteras Beach",
-    desc: "The city's main beach — right on your doorstep",
+    desc: "The city's main beach, right on your doorstep",
   },
   {
     num: "900m",

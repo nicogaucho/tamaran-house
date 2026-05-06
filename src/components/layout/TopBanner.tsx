@@ -7,7 +7,7 @@ export default function TopBanner() {
       style={{ background: "var(--terra)", height: "36px" }}
     >
       <span>
-        Book directly &amp; save — use code{" "}
+        Book directly &amp; save. Use code{" "}
         <strong
           className="font-semibold px-2 py-0.5 rounded-sm text-[13px] tracking-[0.1em]"
           style={{

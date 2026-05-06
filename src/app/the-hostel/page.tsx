@@ -10,7 +10,7 @@ const values = [
   {
     num: "01",
     name: "Community",
-    desc: "We believe travel is better together. We organize daily activities so guests connect, share meals, and build real friendships — not just WhatsApp contacts.",
+    desc: "We believe travel is better together. We organize daily activities so guests connect, share meals, and build real friendships, not just WhatsApp contacts.",
   },
   {
     num: "02",
@@ -20,7 +20,7 @@ const values = [
   {
     num: "03",
     name: "Authenticity",
-    desc: "No corporate hostel feel here. Every detail — the rooftop terrace, the shared dinners, the hand-picked surf spots — is designed to feel real and local.",
+    desc: "No corporate hostel feel here. Every detail, the rooftop terrace, the shared dinners, the hand-picked surf spots is designed to feel real and local.",
   },
 ];
 
@@ -47,13 +47,13 @@ const hostelActivities = [
   {
     num: "03",
     name: "Kayaking & Snorkeling",
-    desc: "Las Canteras is a natural reef — one of the best snorkeling spots in Europe. We provide free gear. Kayaking tours available through our partner network.",
+    desc: "Las Canteras is a natural reef, one of the best snorkeling spots in Europe. We provide free gear. Kayaking tours available through our partner network.",
     tag: "On request",
   },
   {
     num: "04",
     name: "Group Dinners",
-    desc: "Family-style dinners where strangers become friends. Cooked in our communal kitchen or at one of the best local restaurants — we'll find the best spots in town.",
+    desc: "Family-style dinners where strangers become friends. Cooked in our communal kitchen or at one of the best local restaurants, we'll find the best spots in town.",
     tag: "Weekly",
   },
   {
@@ -226,7 +226,7 @@ export default function TheHostelPage() {
                       color: "var(--ink)",
                     }}
                   >
-                    &ldquo;We wanted a place where travelers could feel brave — just like the ancient Canarians.&rdquo;
+                    &ldquo;We wanted a place where travelers could feel brave, just like the ancient Canarians.&rdquo;
                   </blockquote>
                 </RevealOnScroll>
                 <RevealOnScroll delay={2}>
@@ -238,14 +238,14 @@ export default function TheHostelPage() {
                     </p>
                     <p className="text-[16px] leading-[1.8] mb-5" style={{ color: "var(--muted)" }}>
                       We built this hostel to be more than just a bed for the night. We wanted it to be a{" "}
-                      <strong className="font-medium" style={{ color: "var(--ink)" }}>home</strong> — a place where strangers
+                      <strong className="font-medium" style={{ color: "var(--ink)" }}>home</strong>, a place where strangers
                       become friends, where you eat together, surf together, explore together, and share stories that last a lifetime.
                     </p>
                     <p className="text-[16px] leading-[1.8]" style={{ color: "var(--muted)" }}>
                       Located just 50 meters from Las Canteras beach, one of Europe&apos;s finest urban beaches, Tamaran House puts you
                       at the heart of everything{" "}
                       <strong className="font-medium" style={{ color: "var(--ink)" }}>Las Palmas de Gran Canaria</strong> has to
-                      offer — sun, surf, culture, and buena vibra.
+                      offer sun, surf, culture, and buena vibra.
                     </p>
                   </div>
                 </RevealOnScroll>
@@ -330,7 +330,7 @@ export default function TheHostelPage() {
                     </p>
                     <p className="text-[15px] leading-[1.8]" style={{ color: "rgba(255,255,255,0.6)" }}>
                       <strong className="font-medium" style={{ color: "#fff" }}>Las Canteras</strong>, right outside our door, is
-                      regularly voted one of the best urban beaches in Europe — a long stretch of golden sand protected by a
+                      regularly voted one of the best urban beaches in Europe a long stretch of golden sand protected by a
                       natural reef, perfect for swimming, snorkeling, and learning to surf.
                     </p>
                   </div>
@@ -423,7 +423,7 @@ export default function TheHostelPage() {
               </div>
               <RevealOnScroll>
                 <p className="text-[15px] leading-[1.75] max-w-[420px]" style={{ color: "var(--muted)" }}>
-                  Every week we organize a packed calendar of activities — from surf lessons to group dinners, city tours to yoga
+                  Every week we organize a packed calendar of activities: from surf lessons to group dinners, city tours to yoga
                   sessions. There&apos;s always something going on at Tamaran.
                 </p>
               </RevealOnScroll>
