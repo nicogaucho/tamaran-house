@@ -5,7 +5,7 @@ export function LodgingJsonLd() {
     name: "Tamaran House",
     description:
       "Surf hostel 50 m from Las Canteras beach in Las Palmas de Gran Canaria.",
-    url: "https://tamaranhouse.com",
+    url: "https://www.tamaranhouse.com",
     telephone: "+34673258236",
     email: "tamaran.house@gmail.com",
     address: {
@@ -20,7 +20,7 @@ export function LodgingJsonLd() {
       latitude: 28.1248,
       longitude: -15.43,
     },
-    image: "https://tamaranhouse.com/uploads/ImageHero.jpg",
+    image: "https://www.tamaranhouse.com/uploads/ImageHero.jpg",
     priceRange: "€–€€",
     starRating: { "@type": "Rating", ratingValue: "4.9" },
     amenityFeature: [

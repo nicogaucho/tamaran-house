@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://tamaranhouse.com";
+  const base = "https://www.tamaranhouse.com";
   return [
     { url: base,                  lastModified: new Date(), changeFrequency: "weekly",  priority: 1.0 },
     { url: `${base}/the-hostel`,  lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },

@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   description:
     "Choose from 4-bed dorms (shared or ensuite), private double rooms with balcony, " +
     "and a master suite with ocean view. All rooms in Las Palmas de Gran Canaria.",
-  alternates: { canonical: "https://tamaranhouse.com/rooms" },
+  alternates: { canonical: "https://www.tamaranhouse.com/rooms" },
   openGraph: {
-    url: "https://tamaranhouse.com/rooms",
+    url: "https://www.tamaranhouse.com/rooms",
     images: [
       {
         url: "/uploads/Tenerife.jpg",

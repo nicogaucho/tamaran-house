@@ -106,9 +106,9 @@ export const metadata: Metadata = {
   description:
     "Meet the Tamaran House team and discover why Gran Canaria is the ultimate surf destination. " +
     "Our story, values, island guide, and weekly activities.",
-  alternates: { canonical: "https://tamaranhouse.com/the-hostel" },
+  alternates: { canonical: "https://www.tamaranhouse.com/the-hostel" },
   openGraph: {
-    url: "https://tamaranhouse.com/the-hostel",
+    url: "https://www.tamaranhouse.com/the-hostel",
     images: [
       {
         url: "/uploads/GalleryRoof.jpg",

@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   description:
     "Get in touch with Tamaran House. Email, WhatsApp, or fill in our form. " +
     "We are at Calle Sargento Llagas 34, Las Palmas de Gran Canaria.",
-  alternates: { canonical: "https://tamaranhouse.com/contact" },
-  openGraph: { url: "https://tamaranhouse.com/contact" },
+  alternates: { canonical: "https://www.tamaranhouse.com/contact" },
+  openGraph: { url: "https://www.tamaranhouse.com/contact" },
 };
 
 export default function ContactPage() {

@@ -27,7 +27,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tamaranhouse.com"),
+  metadataBase: new URL("https://www.tamaranhouse.com"),
   title: {
     default: "Tamaran House — Surf Hostel in Las Palmas de Gran Canaria",
     template: "%s | Tamaran House",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://tamaranhouse.com",
+    url: "https://www.tamaranhouse.com",
     siteName: "Tamaran House",
     title: "Tamaran House — Surf Hostel in Las Palmas de Gran Canaria",
     description:
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: {
-    canonical: "https://tamaranhouse.com",
+    canonical: "https://www.tamaranhouse.com",
   },
   verification: {
     google: "AiVUTOzKuTD9Vs5ASvY49LVWkjPg8jE-ynwS1uHnB_M",

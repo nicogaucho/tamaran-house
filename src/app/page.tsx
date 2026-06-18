@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   description:
     "Tamaran House: surf hostel 50 m from Las Canteras beach, Las Palmas de Gran Canaria. " +
     "Dorms from €25/night, private rooms from €65. Surf lessons, yoga, rooftop, community kitchen.",
-  alternates: { canonical: "https://tamaranhouse.com" },
-  openGraph: { url: "https://tamaranhouse.com" },
+  alternates: { canonical: "https://www.tamaranhouse.com" },
+  openGraph: { url: "https://www.tamaranhouse.com" },
 };
 
 export default function Home() {
